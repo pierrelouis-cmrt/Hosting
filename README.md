@@ -1,5 +1,5 @@
-# Zeria Hosting
+# Zeirea Hosting
 
 ### Front End only
 
-- Zeria's landing page, login screens and dashboars UI
+- Zeirea's landing page, login screens and dashboars UI
