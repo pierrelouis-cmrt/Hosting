@@ -1,0 +1,389 @@
+/* Web Fonts @import */
+@import url("https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&family=Paytone+One&display=swap");
+
+/* BASIC STYLING
+-------------------------------- */
+/* Colors */
+:root {
+  --color-bg: #181c2f;
+  --color-header-footer: #0f121e;
+  --color-text: #ffffff;
+  --color-text2: #a7a7a7;
+  --color-primary: #ff8157;
+  --color-secondary: #662d95;
+  --color-accent: #f9a528;
+  --color-hover-primary: #c74e25;
+  --color-hover-secondary: #3e1b5a;
+  --color-hover-accent: #ee8e00;
+  --color-font-details: #f4f4f4;
+}
+/* ================================================== */
+
+/* Clearfix
+-------------------- */
+.group:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+* html .group {
+  zoom: 1;
+}
+
+/* IE6-IE7 */
+*:first-child + html .group {
+  zoom: 1;
+}
+
+/* General styling
+-------------------- */
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--color-bg);
+  font: 1.6em "Amiko", serif;
+  line-height: 1.5;
+}
+
+header,
+.main,
+footer {
+  max-width: 81em;
+  margin: 0 auto;
+}
+
+/* Header
+-------------------- */
+.header-wrapper {
+  background: var(--color-header-footer);
+}
+
+header {
+  padding: 20px;
+  background: var(--color-header-footer);
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+header h1,
+header .logo,
+header hgroup {
+  position: relative;
+}
+
+header .logo {
+  filter: invert(90);
+  max-width: 250px;
+}
+
+header hgroup {
+  padding-left: 30px;
+}
+
+header h1 {
+  text-indent: -9999px;
+  font: bold 3em/1 "Paytone One", sans-serif;
+  color: var(--color-text);
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  padding-right: 0.75em;
+}
+
+header h2 {
+  font: bold 1.6em "Paytone One", sans-serif;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+header h3 {
+  font: italic 1.2em "Paytone One", sans-serif;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+header h4 {
+  font: 0.8em "Amiko", serif;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.project-title {
+  position: relative;
+  float: left;
+}
+
+/* Main
+-------------------- */
+.main {
+  padding: 20px;
+  background: var(--color-background-body);
+}
+
+.section-heading {
+  /* e.g., h3's like "Possible colors", "Textures" */
+  font: italic 1.3em "Paytone One", sans-serif;
+  color: var(--color-text2);
+  margin-bottom: 0.5em;
+}
+
+.main p {
+  margin-bottom: 0.5em;
+}
+
+section {
+  margin-bottom: 2em;
+}
+
+/* Colors
+-------------------- */
+.colors ul,
+.colors li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.colors li {
+  width: 49%;
+  display: inline-block;
+  position: relative;
+  padding-left: 4rem;
+  margin-bottom: 2rem;
+  color: var(--color-text2);
+}
+
+.colors li:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+}
+
+.colors li.color-bg:before {
+  background: var(
+    --color-header-footer
+  ); /* Should be --color-bg but it needs to be different than the body's color to be visible */
+}
+
+.colors li.color-text:before {
+  background: var(--color-text);
+}
+
+.colors li.color-text2:before {
+  background: var(--color-text2);
+}
+
+.colors li.color-primary:before {
+  background: var(--color-primary);
+}
+
+.colors li.color-secondary:before {
+  background: var(--color-secondary);
+}
+
+.colors li.color-accent:before {
+  background: var(--color-accent);
+}
+
+.colors strong {
+  display: block;
+}
+
+/* Buttons
+--------------------- */
+[class*="button-"] {
+  display: inline-block;
+  position: relative;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+.button-1 {
+  padding: 1em;
+  border-radius: 4px;
+  background: var(--color-primary);
+  text-align: center;
+  text-decoration: none;
+  font: bold 1.25em/1 "Paytone One", sans-serif;
+  letter-spacing: 1px;
+  color: black;
+  text-transform: uppercase;
+  text-shadow: 0px -1px 0px var(--color-hover-primary);
+  transition: all 0.2s ease;
+}
+
+.button-1:hover {
+  background: var(--color-hover-primary);
+}
+
+.button-2 {
+  padding: 1em;
+  border-radius: 4px;
+  background: var(--color-secondary);
+  text-align: center;
+  text-decoration: none;
+  font: bold 1.25em/1 "Paytone One", sans-serif;
+  letter-spacing: 1px;
+  color: var(--color-text);
+  text-transform: uppercase;
+  text-shadow: 0px -1px 0px var(--color-hover-secondary);
+  transition: all 0.2s ease;
+}
+
+.button-2:hover {
+  background: var(--color-hover-secondary);
+}
+
+/* Typography samples
+--------------------- */
+.typography-samples {
+  background: var(--color-background-body);
+  padding: 0;
+}
+
+@media (min-width: 50em) {
+  .typography-samples {
+    padding: 20px;
+  }
+}
+h3.typography-sample {
+  font: bold 2.7em/1.25 "Paytone One", sans-serif;
+  margin-bottom: 0.25em;
+  color: var(--color-text);
+}
+
+h4.typography-sample {
+  font: italic 1.5em/1.25 "Amiko", serif;
+  margin-bottom: 0.25em;
+  color: var(--color-text);
+}
+
+p.typography-sample {
+  font: 1em/1.5 "Amiko", serif;
+  color: var(--color-text2);
+}
+
+p.typography-sample strong {
+  font-weight: bold;
+}
+
+p.typography-sample em {
+  font-style: italic;
+}
+
+a.typography-sample {
+  font: 1em "Paytone One", sans-serif;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a.typography-sample:hover {
+  color: var(--color-hover-accent);
+  transition: all 0.3s ease;
+}
+
+p[class*="font-details-"] {
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+  font: 0.75em/1 "Amiko", serif;
+  color: var(--color-font-details);
+}
+
+p[class*="font-details-"] .font-color {
+  font-style: italic;
+}
+
+/* Logo
+-------------------- */
+
+.logo-variants-grid {
+  display: block;
+}
+
+.logo-variant1 {
+  max-width: 400px;
+  margin-right: 15vw;
+}
+
+.logo-variant2 {
+  max-width: 140px;
+}
+
+/* Footer
+-------------------- */
+.footer-wrapper {
+  background: var(--color-header-footer);
+}
+
+footer {
+  padding: 20px;
+  font: italic 1em/1.5 "Paytone One", sans-serif;
+  color: var(--color-text2);
+}
+
+footer a {
+  font-weight: bold;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* Grids
+based on Chris Coyier's Dont Overthink It Grids
+https://css-tricks.com/dont-overthink-it-grids/
+-------------------- */
+[class*="col-"] {
+  float: left;
+}
+
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-1-2 {
+  width: 100%;
+  /* Single-column by default, i.e., on mobile */
+}
+
+@media (min-width: 50em) {
+  .col-1-2 {
+    /* 2-column if viewport is wide enough*/
+    width: 50%;
+  }
+}
+.col-1-3 {
+  width: 100%;
+}
+
+@media (min-width: 50em) {
+  .col-1-3 {
+    width: 33.3333%;
+  }
+}
+[class*="col-"] {
+  padding: 0;
+}
+
+@media (min-width: 50em) {
+  [class*="col-"] {
+    padding-left: 30px;
+  }
+}
+[class*="col-"]:first-child {
+  padding-left: 0;
+}
