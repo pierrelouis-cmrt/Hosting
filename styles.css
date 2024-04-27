@@ -82,7 +82,7 @@ header h1,
 header .logo,
 header hgroup {
   position: relative;
-  margin: 0 auto;
+  margin: 0;
 }
 
 header .logo {
@@ -424,6 +424,9 @@ https://css-tricks.com/dont-overthink-it-grids/
   .colors li {
     display: block;
     width: 100%;
+  }
+  hgroup {
+    padding-left: 30px;
   }
 }
 
