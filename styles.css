@@ -6,7 +6,7 @@
 /* Colors */
 :root {
   --color-bg: #181c2f;
-  --color-header-footer: #0f121e;
+  --color-bg-darker: #171717;
   --color-text: #ffffff;
   --color-text2: #a7a7a7;
   --color-primary: #ff8157;
@@ -68,12 +68,12 @@ footer {
 /* Header
 -------------------- */
 .header-wrapper {
-  background: var(--color-header-footer);
+  background: var(--color-bg-darker);
 }
 
 header {
   padding: 20px;
-  background: var(--color-header-footer);
+  background: var(--color-bg-darker);
   display: grid;
   align-items: center;
 }
@@ -171,7 +171,7 @@ section {
 
 .colors li.color-bg:before {
   background: var(
-    --color-header-footer
+    --color-bg-darker
   ); /* Should be --color-bg but it needs to be different than the body's color to be visible */
 }
 
@@ -321,7 +321,7 @@ p[class*="font-details-"] .font-color {
 /* Footer
 -------------------- */
 .footer-wrapper {
-  background: var(--color-header-footer);
+  background: var(--color-bg-darker);
 }
 
 footer {
