@@ -122,7 +122,8 @@ body {
 }
 
 .form-btn:hover {
-  transform: scale(105%);
+  transform: translate(0, -2px);
+  box-shadow: 4px 4px 10px rgba(185, 185, 185, 0.2);
 }
 
 .sign-up-label {
