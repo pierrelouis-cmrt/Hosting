@@ -34,23 +34,6 @@ $(document).ready(function () {
 
 /*------------------------------*/
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Select all list items that need color values
-  document.querySelectorAll('li[class^="color-"]').forEach((item) => {
-    const cssVarName = `--${item.className.split(" ")[0]}`; // Assume first class name indicates the color
-    const hexCode = getComputedStyle(document.documentElement)
-      .getPropertyValue(cssVarName)
-      .trim();
-
-    // Assuming the strong element's text includes "Color Name (#xxxxxx)"
-    const strongElement = item.querySelector(".micro-type");
-    const originalText = strongElement.textContent;
-    const updatedText = originalText.replace(/(#xxxxxx)/, `(${hexCode})`); // Replace placeholder with actual hex code
-
-    strongElement.textContent = updatedText; // Update the text content with hex code
-  });
-});
-
 document.addEventListener("DOMContentLoaded", async function () {
   const elements = document.querySelectorAll('li[class^="color-"]');
   const baseUrl = "https://api.color.pizza/v1/";

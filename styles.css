@@ -76,22 +76,18 @@ header {
   background: var(--color-header-footer);
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 1fr;
 }
 
 header h1,
 header .logo,
 header hgroup {
   position: relative;
+  margin: 0 auto;
 }
 
 header .logo {
   filter: invert(90);
-  max-width: 250px;
-}
-
-header hgroup {
-  padding-left: 30px;
+  max-width: 225px;
 }
 
 header h1 {
@@ -120,7 +116,7 @@ header h4 {
 
 .project-title {
   position: relative;
-  float: left;
+  text-align: center;
 }
 
 /* Main
@@ -155,8 +151,8 @@ section {
 }
 
 .colors li {
-  width: 49%;
-  display: inline-block;
+  width: 100%;
+  display: block;
   position: relative;
   padding-left: 4rem;
   margin-bottom: 2rem;
@@ -311,16 +307,15 @@ p[class*="font-details-"] .font-color {
 -------------------- */
 
 .logo-variants-grid {
-  display: block;
+  display: grid;
 }
 
 .logo-variant1 {
-  max-width: 400px;
-  margin-right: 15vw;
+  max-width: 225px;
 }
 
 .logo-variant2 {
-  max-width: 140px;
+  max-width: 100px;
 }
 
 /* Footer
@@ -360,6 +355,9 @@ https://css-tricks.com/dont-overthink-it-grids/
   /* Single-column by default, i.e., on mobile */
 }
 
+/* Media Queries
+-------------------- */
+
 @media (min-width: 50em) {
   .col-1-2 {
     /* 2-column if viewport is wide enough*/
@@ -386,4 +384,52 @@ https://css-tricks.com/dont-overthink-it-grids/
 }
 [class*="col-"]:first-child {
   padding-left: 0;
+}
+
+@media screen and (min-width: 400px) {
+  header .project-title {
+    margin-top: 25px;
+    text-align: start;
+  }
+  header .project-title h2,
+  header .project-title h3,
+  header .project-title h4 {
+    margin: 5px;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  header .project-title {
+    margin: 0;
+  }
+  .logo-variants-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .colors li {
+    display: inline-block;
+    width: 49%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .logo-variants-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .colors li {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .colors li {
+    display: inline-block;
+    width: 49%;
+  }
 }
