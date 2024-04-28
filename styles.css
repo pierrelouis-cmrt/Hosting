@@ -325,15 +325,9 @@ p[class*="font-details-"] .font-color {
   padding: 25px;
 }
 
-object {
-  width: 365px;
-  height: 815px;
-  display: block;
-  margin: auto;
-}
-
 .object {
   border-style: solid;
+  margin: 15px;
   border-width: 10px;
   border-color: var(--color-bg-darker);
   padding: 15px;
