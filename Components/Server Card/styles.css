@@ -1,0 +1,39 @@
+/* Web Fonts @import */
+@import url("https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&family=Paytone+One&display=swap");
+
+/* Colors */
+:root {
+  --color-bg: #181c2f;
+  --color-bg-darker: #171717;
+  --color-text: #ffffff;
+  --color-text2: #a7a7a7;
+  --color-primary: #ff8157;
+  --color-secondary: #662d95;
+  --color-accent: #f9a528;
+  --color-hover-primary: #c74e25;
+  --color-hover-secondary: #3e1b5a;
+  --color-hover-accent: #ee8e00;
+  --color-font-details: #f4f4f4;
+}
+
+/* General Styling */
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--color-bg);
+  font: 1.6em "Amiko", serif;
+  line-height: 1.5;
+}
+
+/* Server Card Styling */
