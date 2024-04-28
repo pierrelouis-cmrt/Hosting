@@ -45,12 +45,12 @@ body {
   margin: 0;
 }
 
+/* Server Card Styling */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-
-/* Server Card Styling */
 
 .card {
   display: relative;
