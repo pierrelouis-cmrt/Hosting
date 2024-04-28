@@ -56,10 +56,11 @@ body {
 
 .title {
   text-align: center;
+  font-family: "Paytone One", sans-serif;
   color: var(--color-text);
   margin: 10px 0 30px 0;
   font-size: 38px;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .sub-title {
