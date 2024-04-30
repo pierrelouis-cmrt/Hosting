@@ -1,9 +1,10 @@
 /* Web Fonts @import */
-@import url("https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&family=Paytone+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* Colors */
 :root {
   --color-bg: #181c2f;
+  --color-bg-85: #181c2f85;
   --color-bg-darker: #171717;
   --color-text: #ffffff;
   --color-text2: #a7a7a7;
@@ -14,9 +15,9 @@
   --color-hover-secondary: #3e1b5a;
   --color-hover-accent: #ee8e00;
   --color-font-details: #f4f4f4;
-  --gray-card-header: #4b5563;
-  --gray-card-status: #374151;
-  --gray-card-bg: #1f2937;
+  --gray-card-header: #303641;
+  --gray-card-status: #303235;
+  --gray-card-bg: #1d222e;
 }
 
 /* General Styling */
@@ -35,7 +36,7 @@ html {
 
 body {
   background: var(--color-bg);
-  font: 1.6em "Amiko", serif;
+  font: 1.6em "Poppins", serif;
   line-height: 1.5;
   padding: 25px;
   display: flex;
@@ -47,43 +48,48 @@ body {
 
 /* Server Card Styling */
 
-.grid {
+.servers-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
 }
 
-.card {
+.server-card {
   display: relative;
   background-color: var(--gray-card-bg);
+  border-radius: 17px;
+
   padding: 20px;
-  border-radius: 16px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  width: 350px;
-  margin: 25px;
+  width: 320px;
 }
 
-.header {
+.server-header {
   color: white;
   font-family: "Paytone One", sans-serif;
-  font-size: 24px;
-  margin-bottom: 24px;
-  padding: 15px;
-  background-color: #4b5563;
-  border-radius: 12px;
+  font-size: 20px;
+  margin-bottom: 25px;
+  padding: 12px;
+  background-color: var(--gray-card-header);
+  border-radius: 7px;
   text-align: center;
 }
 
 .offer {
   display: block;
   width: 80%;
+  font-size: 18px !important;
   background-color: var(--color-bg-darker);
   color: var(--color-text2);
   padding: 15px 32px 12px 32px;
   text-align: center;
-  border-radius: 100px;
+  border-radius: 99px;
   font-weight: 500;
   font-size: 20px;
   margin: 0 auto 40px auto;
+  -webkit-box-shadow: 0px 0px 20px 15px rgba(20, 20, 20, 0.35);
+  -moz-box-shadow: 0px 0px 20px 15px rgba(20, 20, 20, 0.35);
+  box-shadow: 0px 0px 20px 15px rgba(20, 20, 20, 0.35);
 }
 
 .stats {
@@ -104,6 +110,7 @@ body {
 
 .icon-text {
   padding-top: 3px;
+  font-size: 14px !important;
 }
 
 .icon-text i {
@@ -127,7 +134,7 @@ body {
   border-radius: 9999px;
 }
 
-.footer {
+.server-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;

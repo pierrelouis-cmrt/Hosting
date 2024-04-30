@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../favicon-16x16.png"
+    />
+    <link rel="manifest" href="../../site.webmanifest" />
+    <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#00aba9" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Espace Client</title>
+    <meta name="description" content="Zeirea's Dashboard (espace client)" />
+  </head>
+
+  <body>
+    <!-- Sidebar design inspired by Mohamed Azouaoui on GitHub : https://github.com/azouaoui-med/pro-sidebar-template -->
+    <div class="layout has-sidebar fixed-sidebar fixed-header">
+      <aside id="sidebar" class="sidebar break-point-md has-bg-image">
+        <a id="btn-collapse" class="sidebar-collapser"
+          ><i class="ri-arrow-left-s-line"></i
+        ></a>
+        <div class="image-wrapper">
+          <img src="../../Assets/2024-04-28_14.png" alt="sidebar background" />
+        </div>
+        <div class="sidebar-layout">
+          <div class="sidebar-header">
+            <div class="pro-sidebar-logo">
+              <div>
+                <img class="logo" alt="logo" src="../../Assets/Z Logo.svg" />
+              </div>
+              <h5>Zeirea Hosting</h5>
+            </div>
+          </div>
+          <div class="sidebar-content">
+            <nav class="menu open-current-submenu">
+              <ul>
+                <li class="menu-header"><span> GENERAL </span></li>
+                <li class="menu-item sub-menu">
+                  <a href="#">
+                    <span class="menu-icon">
+                      <i class="ri-server-fill"></i>
+                    </span>
+                    <span class="menu-title">Mes Serveurs</span>
+                  </a>
+                  <div class="sub-menu-list">
+                    <ul>
+                      <li class="menu-item">
+                        <a href="#">
+                          <span class="menu-title">Serveur 1</span>
+                        </a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="#">
+                          <span class="menu-title">Serveur 2</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-item sub-menu">
+                  <a href="#">
+                    <span class="menu-icon">
+                      <i class="ri-global-fill"></i>
+                    </span>
+                    <span class="menu-title">Serveurs Partagés</span>
+                  </a>
+                  <div class="sub-menu-list">
+                    <ul>
+                      <li class="menu-item">
+                        <a href="#">
+                          <span class="menu-title">Serveur Partagé 1</span>
+                        </a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="#">
+                          <span class="menu-title">Serveur Partagé 2</span>
+                        </a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="#">
+                          <span class="menu-title">Serveur Partagé 3</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-item sub-menu">
+                  <a href="#">
+                    <span class="menu-icon">
+                      <i class="ri-shopping-cart-fill"></i>
+                    </span>
+                    <span class="menu-title">Offres</span>
+                    <span class="menu-suffix">
+                      <span class="badge primary">Promo</span>
+                    </span>
+                  </a>
+                  <div class="sub-menu-list">
+                    <ul>
+                      <li class="menu-item">
+                        <a href="#">
+                          <span class="menu-title"
+                            >Boutique <i class="ri-external-link-line"></i
+                          ></span>
+                        </a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="#">
+                          <span class="menu-title">Vos Commandes</span>
+                        </a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="#">
+                          <span class="menu-title">Moyens de Paiement</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-header" style="padding-top: 20px">
+                  <span> EXTRA </span>
+                </li>
+                <li class="menu-item">
+                  <a href="#">
+                    <span class="menu-icon">
+                      <i class="ri-book-2-fill"></i>
+                    </span>
+                    <span class="menu-title">Documentation</span>
+                    <span class="menu-suffix">
+                      <span class="badge secondary">Beta</span>
+                    </span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">
+                    <span class="menu-icon">
+                      <i class="ri-service-fill"></i>
+                    </span>
+                    <span class="menu-title">Support</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">
+                    <span class="menu-icon">
+                      <i class="ri-send-plane-fill"></i>
+                    </span>
+                    <span class="menu-title">Nous Contacter</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="sidebar-footer">
+            <div class="footer-box">
+              <div>
+                <img
+                  class="profile-picture"
+                  src="../../Assets/pp.png"
+                  alt="Profile Picture"
+                />
+              </div>
+              <div style="padding: 0 10px">
+                <span
+                  class="username"
+                  style="display: block; margin-bottom: 10px"
+                  >CyberOne
+                </span>
+                <div>
+                  <a rel="noopener" href="#"
+                    >Paramètres et <br />
+                    Préférences
+                    <i class="ri-external-link-line"></i>
+                  </a>
+                </div>
+                <a rel="noopener" href="#">
+                  <br /><i class="ri-settings-3-fill user-settings"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div id="overlay" class="overlay"></div>
+      <!--Dashboard content-->
+      <div class="layout">
+        <main class="content">
+          <div>
+            <a id="btn-toggle" href="#" class="sidebar-toggler break-point-md">
+              <i class="ri-menu-line ri-xl"></i>
+            </a>
+            <h1>Bienvenue sur votre tableau de bord!</h1>
+            <span style="display: inline-block">
+              Vous pouvez ici gérer vos serveurs personnels et partagés.
+            </span>
+            <br />
+            <span>
+              Pour plus d'information, veuillez consulter notre
+              <a rel="noopener" href="#" target="_blank">documentation</a>.
+            </span>
+            <hr style="margin-top: 20px" />
+          </div>
+          <div>
+            <h2>Mes Serveurs</h2>
+            <div class="servers">
+              <div class="server-card">
+                <div class="server-header">Serveur Hors Ligne</div>
+                <span class="offer">Offre TITAN GOLD</span>
+
+                <ul class="stats">
+                  <li>
+                    <div class="stat stat1">
+                      <span class="icon-text"
+                        ><i class="fas fa-microchip"></i> CPU</span
+                      >
+                      <span class="value">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner" style="width: 0%"></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stat">
+                      <span class="icon-text"
+                        ><i class="fas fa-memory"></i> RAM</span
+                      >
+                      <span class="value">0Mo / 2000Mo</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner" style="width: 0%"></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stat">
+                      <span class="icon-text"
+                        ><i class="fas fa-hdd"></i> Stockage</span
+                      >
+                      <span class="value">40Go / 50Go</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner" style="width: 80%"></div>
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="server-footer">
+                  <span class="icon-text"
+                    ><i class="fas fa-user-friends"></i> Joueurs connectés :
+                    <span>0 / 10</span></span
+                  >
+                  <button title="share" class="share-button">
+                    <i class="fas fa-user-plus"></i>
+                  </button>
+                </div>
+                <div class="status">
+                  <span class="status-dot offline"></span> Hors ligne
+                </div>
+              </div>
+              <div class="server-card">
+                <div class="server-header">Serveur En Démarrage</div>
+                <span class="offer">Offre TITAN GOLD</span>
+
+                <ul class="stats">
+                  <li>
+                    <div class="stat stat1">
+                      <span class="icon-text"
+                        ><i class="fas fa-microchip"></i> CPU</span
+                      >
+                      <span class="value">90%</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner" style="width: 90%"></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stat">
+                      <span class="icon-text"
+                        ><i class="fas fa-memory"></i> RAM</span
+                      >
+                      <span class="value">1500Mo / 2000Mo</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner" style="width: 75%"></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stat">
+                      <span class="icon-text"
+                        ><i class="fas fa-hdd"></i> Stockage</span
+                      >
+                      <span class="value">40Go / 50Go</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner" style="width: 80%"></div>
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="server-footer">
+                  <span class="icon-text"
+                    ><i class="fas fa-user-friends"></i> Joueurs connectés :
+                    <span>0 / 10</span></span
+                  >
+                  <button title="share" class="share-button">
+                    <i class="fas fa-user-plus"></i>
+                  </button>
+                </div>
+                <div class="status">
+                  <span class="status-dot launching"></span> Démarrage en cours
+                </div>
+              </div>
+            </div>
+          </div>
+          <!----------------------------------------->
+          <div>
+            <h2>Serveurs Partagés</h2>
+            <div class="servers">
+              <div class="server-card">
+                <div class="server-header">Serveur Hors Ligne</div>
+                <span class="offer">Offre TITAN GOLD</span>
+
+                <ul class="stats">
+                  <li>
+                    <div class="stat stat1">
+                      <span class="icon-text"
+                        ><i class="fas fa-microchip"></i> CPU</span
+                      >
+                      <span class="value">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner" style="width: 0%"></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stat">
+                      <span class="icon-text"
+                        ><i class="fas fa-memory"></i> RAM</span
+                      >
+                      <span class="value">0Mo / 2000Mo</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner" style="width: 0%"></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stat">
+                      <span class="icon-text"
+                        ><i class="fas fa-hdd"></i> Stockage</span
+                      >
+                      <span class="value">40Go / 50Go</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner" style="width: 80%"></div>
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="server-footer">
+                  <span class="icon-text"
+                    ><i class="fas fa-user-friends"></i> Joueurs connectés :
+                    <span>0 / 10</span></span
+                  >
+                </div>
+                <div class="status">
+                  <span class="status-dot offline"></span> Hors ligne
+                </div>
+              </div>
+              <div class="server-card">
+                <div class="server-header">Serveur En Démarrage</div>
+                <span class="offer">Offre TITAN GOLD</span>
+
+                <ul class="stats">
+                  <li>
+                    <div class="stat stat1">
+                      <span class="icon-text"
+                        ><i class="fas fa-microchip"></i> CPU</span
+                      >
+                      <span class="value">90%</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner" style="width: 90%"></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stat">
+                      <span class="icon-text"
+                        ><i class="fas fa-memory"></i> RAM</span
+                      >
+                      <span class="value">1500Mo / 2000Mo</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner" style="width: 75%"></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stat">
+                      <span class="icon-text"
+                        ><i class="fas fa-hdd"></i> Stockage</span
+                      >
+                      <span class="value">40Go / 50Go</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner" style="width: 80%"></div>
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="server-footer">
+                  <span class="icon-text"
+                    ><i class="fas fa-user-friends"></i> Joueurs connectés :
+                    <span>0 / 10</span></span
+                  >
+                </div>
+                <div class="status">
+                  <span class="status-dot launching"></span> Démarrage en cours
+                </div>
+              </div>
+              <div class="server-card">
+                <div class="server-header">Serveur en ligne</div>
+                <span class="offer">Offre TITAN GOLD</span>
+
+                <ul class="stats">
+                  <li>
+                    <div class="stat stat1">
+                      <span class="icon-text"
+                        ><i class="fas fa-microchip"></i> CPU</span
+                      >
+                      <span class="value">60%</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner" style="width: 60%"></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stat">
+                      <span class="icon-text"
+                        ><i class="fas fa-memory"></i> RAM</span
+                      >
+                      <span class="value">800Mo / 2000Mo</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner" style="width: 40%"></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stat">
+                      <span class="icon-text"
+                        ><i class="fas fa-hdd"></i> Stockage</span
+                      >
+                      <span class="value">40Go / 50Go</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner" style="width: 80%"></div>
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="server-footer">
+                  <span class="icon-text"
+                    ><i class="fas fa-user-friends"></i> Joueurs connectés :
+                    <span>7 / 10</span></span
+                  >
+                </div>
+                <div class="status">
+                  <span class="status-dot online"></span> En ligne depuis :
+                  <i>3 heures</i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div class="overlay"></div>
+      </div>
+    </div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
