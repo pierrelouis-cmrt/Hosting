@@ -127,20 +127,27 @@ class Poppers {
 const slideUp = (target, duration = ANIMATION_DURATION) => {
   const { parentElement } = target;
   parentElement.classList.remove("open");
-  target.style.transitionProperty = "height, margin, padding";
+
+  target.style.maxHeight = `${target.offsetHeight}px`;
+
+  // Force the browser to recognize the max-height change
+  target.offsetHeight; // This causes a reflow, making the browser acknowledge the change
+
+  target.style.transitionProperty = "max-height, margin, padding, opacity";
   target.style.transitionDuration = `${duration}ms`;
   target.style.boxSizing = "border-box";
-  target.style.height = `${target.offsetHeight}px`;
-  target.offsetHeight;
   target.style.overflow = "hidden";
-  target.style.height = 0;
+
+  target.style.maxHeight = 0;
   target.style.paddingTop = 0;
   target.style.paddingBottom = 0;
   target.style.marginTop = 0;
   target.style.marginBottom = 0;
+  target.style.opacity = 0;
+
   window.setTimeout(() => {
     target.style.display = "none";
-    target.style.removeProperty("height");
+    target.style.removeProperty("max-height");
     target.style.removeProperty("padding-top");
     target.style.removeProperty("padding-bottom");
     target.style.removeProperty("margin-top");
@@ -148,8 +155,10 @@ const slideUp = (target, duration = ANIMATION_DURATION) => {
     target.style.removeProperty("overflow");
     target.style.removeProperty("transition-duration");
     target.style.removeProperty("transition-property");
+    target.style.removeProperty("opacity");
   }, duration);
 };
+
 const slideDown = (target, duration = ANIMATION_DURATION) => {
   const { parentElement } = target;
   parentElement.classList.add("open");
@@ -251,7 +260,6 @@ FIRST_SUB_MENUS_BTN.forEach((element) => {
               window.getComputedStyle(el.nextElementSibling).display !==
                 "none" && slideUp(el.nextElementSibling)
           );
-
       slideToggle(element.nextElementSibling);
     }
   });
@@ -259,9 +267,10 @@ FIRST_SUB_MENUS_BTN.forEach((element) => {
 
 /**
  * handle inner submenu click
- */
+
 INNER_SUB_MENUS_BTN.forEach((element) => {
   element.addEventListener("click", () => {
     slideToggle(element.nextElementSibling);
   });
 });
+*/
