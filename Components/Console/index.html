@@ -30,6 +30,55 @@
   </head>
 
   <body>
+    <div class="console">
+      <div class="messages">
+        <div class="message user-message">
+          <span class="message-content">touch index.js</span>
+          <span class="time-stamp">15:27</span>
+        </div>
+        <div class="message user-message">
+          <span class="message-content"
+            >echo console.log("Hello World!") >> index.js</span
+          >
+          <span class="time-stamp">15:28</span>
+        </div>
+        <div class="message user-message">
+          <span class="message-content">node index.js</span>
+          <span class="time-stamp">15:28</span>
+        </div>
+        <div class="message user-message">
+          <span class="message-content">npm init -y</span>
+          <span class="time-stamp">15:32</span>
+        </div>
+        <div class="message server-message">
+          <div class="server-response">
+            <span class="message-content">Démarrage du serveur...</span>
+            <span class="time-stamp">15:28</span>
+          </div>
+          <div class="server-response">
+            <span class="message-content">node index.js</span>
+            <span class="time-stamp">15:28</span>
+          </div>
+          <div class="server-response">
+            <span class="message-content">npm init -y</span>
+            <span class="time-stamp">15:32</span>
+          </div>
+        </div>
+        <div class="message error-message">
+          <span class="message-content">Error: command not found: clsd</span>
+          <span class="time-stamp">15:32</span>
+        </div>
+        <div class="message user-message">
+          <span class="message-content">~test-project$ cls</span>
+          <span class="time-stamp">15:32</span>
+        </div>
+      </div>
+      <div class="input-area">
+        <input type="text" placeholder="Type your command..." />
+        <span class="send-icon">➤</span>
+      </div>
+    </div>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"

@@ -18,6 +18,9 @@
   --gray-card-header: #303641;
   --gray-card-status: #303235;
   --gray-card-bg: #1d222e;
+  --red: rgb(255, 39, 39);
+  --orange: orange;
+  --green: rgb(0, 202, 0);
 }
 
 /* General Styling */
@@ -46,145 +49,94 @@ body {
   margin: 0;
 }
 
-/* Server Card Styling */
+/* Console Styling */
 
-.servers-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
-}
-
-.server-card {
-  display: relative;
-  background-color: var(--gray-card-bg);
-  border-radius: 17px;
-
-  padding: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  width: 320px;
-}
-
-.server-header {
+.console {
+  background-color: #1a1a1a;
   color: white;
-  font-family: "Paytone One", sans-serif;
-  font-size: 20px;
-  margin-bottom: 25px;
-  padding: 12px;
-  background-color: var(--gray-card-header);
-  border-radius: 7px;
-  text-align: center;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 50vw;
+  font-family: "Arial", sans-serif;
 }
 
-.offer {
-  display: block;
-  width: 80%;
-  font-size: 18px !important;
-  background-color: var(--color-bg-darker);
-  color: var(--color-text2);
-  padding: 15px 32px 12px 32px;
-  text-align: center;
-  border-radius: 99px;
-  font-weight: 500;
-  font-size: 20px;
-  margin: 0 auto 40px auto;
-  -webkit-box-shadow: 0px 0px 20px 15px rgba(20, 20, 20, 0.35);
-  -moz-box-shadow: 0px 0px 20px 15px rgba(20, 20, 20, 0.35);
-  box-shadow: 0px 0px 20px 15px rgba(20, 20, 20, 0.35);
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.stats {
-  list-style: none;
-  padding: 0;
-}
-
-.stat {
+.messages .message {
+  padding: 16px;
+  border-radius: 14px;
+  background-color: #2c2c2c;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
-  color: var(--color-text2);
 }
 
-.stat1 {
-  margin-top: 0;
+.messages .user-message .message-content {
+  color: #4caf50;
 }
 
-.icon-text {
-  padding-top: 3px;
-  font-size: 14px !important;
+.messages .error-message .message-content {
+  color: #ff6347;
 }
 
-.icon-text i {
-  margin-right: 5px;
+.messages .server-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.value {
-  color: var(--color-text2);
-}
-
-.progress-bar {
-  height: 12px;
-  background-color: var(--color-bg-darker);
-  border-radius: 9999px;
-  overflow: hidden;
-}
-
-.progress-bar-inner {
-  height: 100%;
-  background-color: var(--color-primary);
-  border-radius: 9999px;
-}
-
-.server-footer {
+.messages .server-message .server-response {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+}
+
+.messages .server-message .server-response .message-content {
+  color: white;
+}
+
+.time-stamp {
+  color: #888;
+  margin-left: 10px;
+}
+
+.input-area {
+  display: flex;
   align-items: center;
-  margin-top: 40px;
-  color: var(--color-text);
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #333;
+  border-radius: 16px;
 }
 
-.status {
-  display: block;
+.input-area input {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
   color: white;
   font-size: 16px;
-  margin-top: 24px;
-  text-align: center;
-  background-color: var(--gray-card-status);
-  padding: 12px 8px 8px 8px;
-  border-radius: 8px;
+  outline: none;
 }
 
-.status i {
-  color: var(--color-text2);
-}
-
-.status-dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  margin-right: 8px;
-}
-
-.offline {
-  background-color: rgb(255, 39, 39);
-}
-
-.launching {
-  background-color: orange;
-}
-
-.online {
-  background-color: rgb(0, 202, 0);
-}
-
-.share-button {
-  color: white;
-  background: none;
-  border: none;
-  font-size: 18px;
+.input-area .send-icon {
+  color: #888;
+  font-size: 24px;
+  margin-left: 10px;
   cursor: pointer;
 }
 
-.share-button:hover {
-  color: var(--color-text2);
+input::placeholder {
+  color: #ccc;
+  opacity: 0.5;
+}
+
+input:focus::placeholder {
+  transition: opacity 0.3s ease;
+  opacity: 0;
 }

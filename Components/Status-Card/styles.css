@@ -18,6 +18,9 @@
   --gray-card-header: #303641;
   --gray-card-status: #303235;
   --gray-card-bg: #1d222e;
+  --red: rgb(255, 39, 39);
+  --orange: orange;
+  --green: rgb(0, 202, 0);
 }
 
 /* General Styling */
