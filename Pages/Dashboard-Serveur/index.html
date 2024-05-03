@@ -3,6 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.min.css
+"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.css"
+    />
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="apple-touch-icon"
@@ -25,11 +36,163 @@
     <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#00aba9" />
     <meta name="theme-color" content="#ffffff" />
-    <title>Dashboard</title>
-    <meta name="description" content="Zeirea's dashboard (gestion serveur)" />
+    <title>Espace Client</title>
+    <meta name="description" content="Zeirea's Dashboard (espace client)" />
   </head>
 
   <body>
+    <!-- Sidebar design inspired by Mohamed Azouaoui on GitHub : https://github.com/azouaoui-med/pro-sidebar-template -->
+    <div class="layout has-sidebar fixed-sidebar fixed-header">
+      <aside id="sidebar" class="sidebar break-point-md has-bg-image">
+        <a id="btn-collapse" class="sidebar-collapser"
+          ><i class="ri-arrow-left-s-line"></i
+        ></a>
+        <div class="image-wrapper">
+          <img src="../../Assets/2024-04-28_14.png" alt="sidebar background" />
+        </div>
+        <div class="sidebar-layout">
+          <div class="sidebar-header">
+            <div class="pro-sidebar-logo">
+              <div>
+                <img class="logo" alt="logo" src="../../Assets/Z Logo.svg" />
+              </div>
+              <h5>Zeirea Hosting</h5>
+            </div>
+          </div>
+          <div class="sidebar-content">
+            <nav class="menu open-current-submenu">
+              <ul>
+                <li class="menu-header"><span> GENERAL </span></li>
+                <li class="menu-item">
+                  <a href="#">
+                    <span class="menu-icon">
+                      <i class="ri-dashboard-fill"></i>
+                    </span>
+                    <span class="menu-title"
+                      >Mon Tableau de Bord <i class="ri-external-link-line"></i
+                    ></span>
+                  </a>
+                </li>
+                <li class="menu-header" style="padding-top: 20px">
+                  <span> GESTION SERVEUR</span>
+                </li>
+                <li class="menu-item">
+                  <a href="#">
+                    <span class="menu-icon">
+                      <i class="ri-base-station-fill"></i>
+                    </span>
+                    <span class="menu-title">Statut</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">
+                    <span class="menu-icon">
+                      <i class="ri-information-2-fill"></i>
+                    </span>
+                    <span class="menu-title">Version</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">
+                    <span class="menu-icon">
+                      <i class="ri-tools-fill"></i>
+                    </span>
+                    <span class="menu-title">Options</span>
+                  </a>
+                </li>
+
+                <li class="menu-header" style="padding-top: 20px">
+                  <span> EXTRA </span>
+                </li>
+                <li class="menu-item">
+                  <a href="#">
+                    <span class="menu-icon">
+                      <i class="ri-book-2-fill"></i>
+                    </span>
+                    <span class="menu-title">Documentation</span>
+                    <span class="menu-suffix">
+                      <span class="badge secondary">Beta</span>
+                    </span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">
+                    <span class="menu-icon">
+                      <i class="ri-service-fill"></i>
+                    </span>
+                    <span class="menu-title">Support</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">
+                    <span class="menu-icon">
+                      <i class="ri-send-plane-fill"></i>
+                    </span>
+                    <span class="menu-title">Nous Contacter</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="sidebar-footer">
+            <div class="footer-box">
+              <div>
+                <img
+                  class="profile-picture"
+                  src="../../Assets/pp.png"
+                  alt="Profile Picture"
+                />
+              </div>
+              <div style="padding: 0 10px">
+                <span
+                  class="username"
+                  style="display: block; margin-bottom: 10px"
+                  >CyberOne
+                </span>
+                <div>
+                  <a rel="noopener" href="#"
+                    >Paramètres et <br />
+                    Préférences
+                    <i class="ri-external-link-line"></i>
+                  </a>
+                </div>
+                <a rel="noopener" href="#">
+                  <br /><i class="ri-settings-3-fill user-settings"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div id="overlay" class="overlay"></div>
+      <!--Dashboard content-->
+      <div class="layout">
+        <main class="content">
+          <div>
+            <a id="btn-toggle" href="#" class="sidebar-toggler break-point-md">
+              <i class="fa-solid fa-bars fa-2xl"></i>
+            </a>
+            <h1>Gestion du serveur "Serveur 1"</h1>
+            <span style="display: inline-block">
+              Vous pouvez ici gérer <strong>l'état</strong> du serveur
+              sélectionné et accéder à la <strong>console</strong>.
+            </span>
+            <br />
+            <span>
+              Pour plus d'information, veuillez consulter notre
+              <a rel="noopener" href="#" target="_blank">documentation</a>.
+            </span>
+            <hr style="margin-top: 20px" />
+          </div>
+          <!--Console et status-->
+          <div class="management">
+            <div class="console"></div>
+            <div class="server"></div>
+          </div>
+        </main>
+        <div class="overlay"></div>
+      </div>
+    </div>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -37,7 +200,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="script.js"></script>
   </body>
 </html>
