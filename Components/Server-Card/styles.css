@@ -169,15 +169,15 @@ body {
 }
 
 .offline {
-  background-color: rgb(255, 39, 39);
+  background-color: var(--red);
 }
 
 .launching {
-  background-color: orange;
+  background-color: var(--orange);
 }
 
 .online {
-  background-color: rgb(0, 202, 0);
+  background-color: var(--green);
 }
 
 .share-button {
