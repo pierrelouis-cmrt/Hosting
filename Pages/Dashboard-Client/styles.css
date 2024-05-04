@@ -162,6 +162,20 @@ hr {
   z-index: 2;
 }
 
+@media screen and (max-width: 350px) {
+  aside {
+    min-width: 220px !important;
+    width: 220px !important;
+  }
+  h5 {
+    font-size: larger !important;
+  }
+  .menu-title {
+    font-size: smaller !important;
+    text-wrap: wrap !important;
+  }
+}
+
 .sidebar .sidebar-layout .sidebar-header {
   height: 100px;
   min-height: 100px;
@@ -750,15 +764,15 @@ hr {
 }
 
 .offline {
-  background-color: rgb(255, 39, 39);
+  background-color: var(--red);
 }
 
 .launching {
-  background-color: orange;
+  background-color: var(--orange);
 }
 
 .online {
-  background-color: rgb(0, 202, 0);
+  background-color: var(--green);
 }
 
 .share-button {

@@ -162,6 +162,20 @@ hr {
   z-index: 2;
 }
 
+@media screen and (max-width: 350px) {
+  aside {
+    min-width: 220px !important;
+    width: 220px !important;
+  }
+  h5 {
+    font-size: larger !important;
+  }
+  .menu-title {
+    font-size: smaller !important;
+    text-wrap: wrap !important;
+  }
+}
+
 .sidebar .sidebar-layout .sidebar-header {
   height: 100px;
   min-height: 100px;
@@ -627,53 +641,222 @@ hr {
   color: var(--color-hover-primary);
 }
 
-/* Server Card Styling */
+/* Management Grid Styling */
 
-.servers {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: flex-start;
+.management {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: 50px 0 50px 0;
   gap: 50px;
-  padding-bottom: 75px;
 }
 
-.server-card {
+@media screen and (max-width: 1250px) {
+  .management {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .server-status {
+    width: 100% !important;
+  }
+
+  .on-off {
+    gap: 25px;
+  }
+
+  .switch {
+    margin: auto !important;
+  }
+}
+
+/* Console Styling */
+
+.console {
+  background-color: var(--color-bg-darker);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 100vh;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.messages .message {
+  padding: 16px;
+  border-radius: 14px;
+  background-color: var(--gray-card-header);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+}
+
+.messages .user-message .message-content {
+  color: var(--green);
+}
+
+.messages .error-message .message-content {
+  color: var(--red);
+}
+
+.messages .server-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.messages .server-message .server-response {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.messages .server-message .server-response .message-content {
+  color: white;
+}
+
+.time-stamp {
+  color: var(--color-text2);
+  margin-left: 10px;
+}
+
+.input-area {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: var(--gray-card-status);
+  border-radius: 16px;
+}
+
+.input-area input {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.input-area .send-icon {
+  color: var(--color-text2);
+  font-size: 24px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: var(--color-text2);
+  opacity: 0.5;
+}
+
+input:focus::placeholder {
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+/* Server Status Styling */
+
+.server-status {
   display: relative;
   background-color: var(--gray-card-bg);
   border-radius: 17px;
-
   padding: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   width: 320px;
+  max-width: 500px;
+  height: auto;
+  margin: auto;
 }
 
-.server-header {
-  color: white;
-  font-family: "Paytone One", sans-serif;
-  font-size: 20px;
-  margin-bottom: 25px;
-  padding: 12px;
-  background-color: var(--gray-card-header);
-  border-radius: 7px;
-  text-align: center;
+.on-off {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row !important;
+  width: 100%;
+  height: auto;
 }
 
-.offer {
-  display: block;
-  width: 80%;
-  font-size: 18px !important;
-  background-color: var(--color-bg-darker);
+.tip {
   color: var(--color-text2);
-  padding: 15px 32px 12px 32px;
-  text-align: center;
-  border-radius: 99px;
-  font-weight: 500;
-  font-size: 20px;
-  margin: 0 auto 40px auto;
-  -webkit-box-shadow: 0px 0px 20px 15px rgba(20, 20, 20, 0.35);
-  -moz-box-shadow: 0px 0px 20px 15px rgba(20, 20, 20, 0.35);
-  box-shadow: 0px 0px 20px 15px rgba(20, 20, 20, 0.35);
+  font-size: medium;
+  margin: auto;
+}
+
+.switch {
+  cursor: pointer;
+  font-size: 30px;
+  position: relative;
+  width: 4em;
+  height: 2em;
+  margin: 10px auto auto auto;
+}
+
+.switch input {
+  opacity: 1;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 4em;
+  height: 2em;
+  background-color: var(--color-bg-darker);
+  transition: 0.4s;
+}
+
+.off {
+  position: absolute;
+  transform: translate(-7px, 1px);
+  content: "";
+  height: 2em;
+  width: 2em;
+  background-color: white;
+  transition: 0.4s;
+  image-rendering: pixelated;
+  opacity: 1;
+}
+
+.on {
+  position: absolute;
+  content: "";
+  height: 2em;
+  width: 2em;
+  background-color: white;
+  transition: 0.4s;
+  image-rendering: pixelated;
+  opacity: 0;
+}
+
+.switch input:checked + .slider {
+  background-color: var(--color-bg-darker);
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px var(--color-bg-darker);
+}
+
+.switch input:checked ~ .off {
+  transform: translate(53px, 1px);
+}
+
+.switch input:checked ~ .on {
+  transform: translate(53px, 1px);
+  opacity: 1;
 }
 
 .stats {
@@ -750,15 +933,15 @@ hr {
 }
 
 .offline {
-  background-color: rgb(255, 39, 39);
+  background-color: var(--red);
 }
 
 .launching {
-  background-color: orange;
+  background-color: var(--orange);
 }
 
 .online {
-  background-color: rgb(0, 202, 0);
+  background-color: var(--green);
 }
 
 .share-button {
