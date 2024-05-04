@@ -322,7 +322,7 @@ document.getElementById("serverSwitch").addEventListener("change", function () {
     ramProgress.style.width = "0%";
 
     // When turning off the server
-    if (!confirm("Are you sure you want to shutdown the server?")) {
+    if (!confirm("Êtes-vous sur de vouloir éteindre le serveur ?")) {
       // If the user cancels, prevent the switch from toggling
       event.preventDefault();
       this.checked = true;
