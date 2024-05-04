@@ -333,13 +333,15 @@ p[class*="font-details-"] .font-color {
   padding: 25px;
 }
 
-.object {
+.object,
+.console {
   border-style: solid;
   margin: 15px;
   border-width: 10px;
   border-color: var(--color-bg-darker);
   padding: 15px;
   box-sizing: border-box;
+  max-width: 90vw !important;
 }
 
 iframe {
@@ -350,6 +352,11 @@ iframe {
   border: none;
   display: block;
   margin: auto;
+}
+
+.iframe-console {
+  max-width: 100vw !important;
+  max-height: 90vh;
 }
 
 .object-list {
