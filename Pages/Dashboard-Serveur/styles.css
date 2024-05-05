@@ -675,14 +675,13 @@ hr {
 .console {
   background-color: var(--color-bg-darker);
   color: white;
-  font-family: "Poppins", sans-serif;
   padding: 20px;
-  border-radius: 16px;
+  border-radius: 17px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   width: 100%;
-  max-width: 100%;
-  height: auto;
-  max-height: 100vh;
+  min-width: 500px;
+  max-width: 1000px;
+  font-family: "Poppins", sans-serif;
 }
 
 .messages {
@@ -693,7 +692,7 @@ hr {
 
 .messages .message {
   padding: 16px;
-  border-radius: 14px;
+  border-radius: 7px;
   background-color: var(--gray-card-header);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   display: flex;
@@ -735,7 +734,8 @@ hr {
   margin-top: 20px;
   padding: 12px;
   background-color: var(--gray-card-status);
-  border-radius: 16px;
+  border-radius: 7px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .input-area input {

@@ -55,7 +55,7 @@ body {
   background-color: var(--color-bg-darker);
   color: white;
   padding: 20px;
-  border-radius: 16px;
+  border-radius: 17px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   width: 100%;
   min-width: 500px;
@@ -71,7 +71,7 @@ body {
 
 .messages .message {
   padding: 16px;
-  border-radius: 14px;
+  border-radius: 7px;
   background-color: var(--gray-card-header);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   display: flex;
@@ -113,7 +113,8 @@ body {
   margin-top: 20px;
   padding: 12px;
   background-color: var(--gray-card-status);
-  border-radius: 16px;
+  border-radius: 7px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .input-area input {
